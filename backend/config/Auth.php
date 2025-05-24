@@ -13,7 +13,7 @@ class Auth{
     //ฟังชั่น เข้าสู่ระบบ
     public function Login($username, $password){
         try{
-            $stmt = $this->conn->prepare("SELECT username FROM users WHERE username = ?");
+            $stmt = $this->conn->prepare("SELECT username FROM user WHERE username = ?");
             $stmt->execute([$username]);
             $user = $stmt->fetch();
 
